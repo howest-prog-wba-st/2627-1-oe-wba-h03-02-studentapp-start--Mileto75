@@ -21,7 +21,11 @@ app.UseRouting();
 app.UseAuthorization();
 
 //custom routes
-
+app.MapControllerRoute(
+    name: "studentsInCourse",
+    pattern: "courses/{courseId:int}/students",
+    defaults: new {Controller = "Courses", Action = "Students" }
+    );
 
 app.MapControllerRoute(
     name: "default",

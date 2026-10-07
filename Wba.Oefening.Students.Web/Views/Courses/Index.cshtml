@@ -14,7 +14,7 @@ else
         @foreach(var course in Model.Courses)
         {
             <div class="col col-3 border border-1 text-center m-2">
-                @course.Value
+                <a href="/courses/@course.Id/students">@course.Value</a>
             </div>
         }
     </div>

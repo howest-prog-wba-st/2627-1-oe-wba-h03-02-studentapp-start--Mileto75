@@ -1,0 +1,20 @@
+﻿@model CoursesStudentsViewModel
+<h3>@Model.PageTitle</h3>
+@* loop over students in course *@
+<div class="row">
+    <table class="table table-hover table-responsive-lg">
+        <thead>
+            <tr>
+                <th>Student</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var student in Model.Students)
+            {
+                <tr>
+                    <td>@student.Value</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
