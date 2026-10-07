@@ -1,0 +1,21 @@
+﻿@model CoursesIndexViewModel
+<h3>@Model.PageTitle</h3>
+@* check if courses present *@
+@if(Model.Courses.Count() == 0)
+{
+    <div class="alert alert-danger">
+        No courses present
+    </div>
+}
+else
+{
+    //loop over the courses
+    <div class="row">
+        @foreach(var course in Model.Courses)
+        {
+            <div class="col col-3 border border-1 text-center m-2">
+                @course.Value
+            </div>
+        }
+    </div>
+}
