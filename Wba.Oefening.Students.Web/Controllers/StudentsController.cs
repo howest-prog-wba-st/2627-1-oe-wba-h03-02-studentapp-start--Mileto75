@@ -6,6 +6,8 @@ namespace Wba.Oefening.Students.Web.Controllers
     {
         public IActionResult Index()
         {
+            //show a list of students
+
             return View();
         }
     }

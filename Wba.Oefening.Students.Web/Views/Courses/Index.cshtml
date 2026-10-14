@@ -14,7 +14,14 @@ else
         @foreach(var course in Model.Courses)
         {
             <div class="col col-3 border border-1 text-center m-2">
-                <a href="/courses/@course.Id/students">@course.Value</a>
+                <a asp-controller="Courses"
+                   asp-action="Students"
+                   asp-route-courseId=@course.Id>@course.Value</a>
+                @* <a asp-route="studentsInCourse"
+                   asp-route-courseId=@course.Id>@course.Value</a> *@
+                <p>
+                    <img asp-append-version="true" src="https://placehold.co/200" />
+                </p>
             </div>
         }
     </div>
